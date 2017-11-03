@@ -47,7 +47,6 @@ for f in tqdm(os.listdir(test_dir)):
         data = Variable(data, volatile=True)
         output = model(data)
         pred = output.data.max(1, keepdim=True)[1]
-        pred += 1 # kaggle evaluator is 1-indexed, so add 1
 
         file_id = f[0:5]
         output_file.write("%s,%d\n" % (file_id, pred))
