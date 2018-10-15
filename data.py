@@ -9,7 +9,7 @@ import torchvision.transforms as transforms
 # and normalize them to mean = 0 and standard-deviation = 1 based on statistics collected from
 # the training set
 data_transforms = transforms.Compose([
-    transforms.Scale((32, 32)),
+    transforms.Resize((32, 32)),
     transforms.ToTensor(),
     transforms.Normalize((0.3337, 0.3064, 0.3171), ( 0.2672, 0.2564, 0.2629))
 ])
@@ -20,7 +20,7 @@ def initialize_data(folder):
     test_zip = folder + '/test_images.zip'
     if not os.path.exists(train_zip) or not os.path.exists(test_zip):
         raise(RuntimeError("Could not find " + train_zip + " and " + test_zip
-              + ', please download them from https://www.kaggle.com/c/nyu-cv-fall-2017/data '))
+              + ', please download them from https://www.kaggle.com/c/nyu-cv-fall-2018/data '))
     # extract train_data.zip to train_data
     train_folder = folder + '/train_images'
     if not os.path.isdir(train_folder):
