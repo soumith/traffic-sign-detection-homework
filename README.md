@@ -1,6 +1,6 @@
-## NYU-CV-Fall-2017
+## NYU-CV-Fall-2018
 
-### Assignment 3: Traffic sign competition
+### Assignment 2: Traffic sign competition
 
 #### Requirements
 1. Install PyTorch from http://pytorch.org
